@@ -14,7 +14,7 @@ HosPatient-Tracker is a web application designed to streamline patient tracking 
 
 **User-Friendly Interface**: The application features a "fast food" style interface with large buttons and clear visuals, optimized for quick and efficient navigation in a high-pressure environment.
 
-## Techincal Details
+## Technical Details
 **Database**: SQLlite will be used for storing patient data and room information
 **Encryption**: No big security process, each patient have a unique code
 **Front-End Technologies**: HTML5, CSS3 (Tailwind Framework), JavaScript
