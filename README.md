@@ -1,7 +1,9 @@
 # HosPatient-Tracker
-HosPatient-Tracker is a web application designed to streamline patient tracking within a hospital emergency department. The system utilizes a "room" based approach, providing a clear visual representation of a patient's journey through various stages of their emergency care.
-<br>
 ![image](https://github.com/aent0n/HosPatient-Tracker/assets/116871473/fd2fd302-4575-4363-805f-c2bdadf39cd3)
+
+## What is it ?
+HosPatient-Tracker is a web application designed to streamline patient tracking within a hospital emergency department. The system utilizes a "room" based approach, providing a clear visual representation of a patient's journey through various stages of their emergency care.
+
 
 ## Key Features
 **Room-Based Tracking**: Patients are assigned to virtual "rooms" representing different stages of their treatment (e.g., triage, examination, lab tests). Each room has:
