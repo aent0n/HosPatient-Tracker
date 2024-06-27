@@ -32,7 +32,7 @@ HosPatient-Tracker is a web application designed to streamline patient tracking 
 [Provide instructions on how to set up and run the application]
 
 ## License
-[Specify the license under which the project is distributed]
+This project is under a MIT license.
 
 
 
