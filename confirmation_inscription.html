@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HPT - Inscriptions</title>
+  <title>HPT - Confirmation Inscription</title>
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -24,41 +24,30 @@
         <div class="flex flex-col">
             <div class="flex text-5xl pl-20 pt-20">
                 <div class="flex flex-col">
-                    <p>S'inscrire</p>
+                    <p>Votre inscription</p>
                     <div class="flex mt-1">
-                        <p> en tant que patient <br> sur HPT</p>
+                        <p>a bien été prise <br> en compte !</p>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <div class="flex flex-col items-center justify-center flex-1 pt-96 mt-10">
-            <div class="flex">
+            <div class="flex flex-col">
                 <div class="flex flex-col">
                     <div class="flex text-3xl">
-                        <p>Formulaire d'inscription:</p>
+                        <p>Vous pouvez maintenant vous connecter</p>
                     </div>
                     <div class="flex flex-col items-center justify-center pt-10">
                         <p class="text-center mb-4">Veuillez entrer les informations suivantes:</p>
-                        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" placeholder="Nom">
-                        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" placeholder="Prénom">
-                        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" placeholder="Numéro de téléphone">
                         <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" placeholder="Adresse mail">
                         <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" placeholder="Mot de passe">
-                        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" placeholder="Confirmer le mot de passe">
                     </div>
                 </div>
 
-                <div class="flex flex-col pl-60 pt-60">
-                    <a href="confirmation_inscription.html" class="bg-red-500 text-white font-bold py-2 px-4 rounded-lg mb-4 transition duration-500 ease-in-out transform hover:-translate-z-1 hover:scale-110 hover:bg-red-700">S'inscrire</a>        
-                    <a href="interface_patient.html" class="text-red-500 transition duration-500 ease-in-out transform hover:-translate-z-1 hover:scale-110 hover:text-red-700 hover:underline">Passer à l'interface patient</a>
-    
+                <div class="flex flex-col pt-10">
+                    <button class="bg-red-500 text-white font-bold py-2 px-4 rounded-lg mb-4 transition duration-500 ease-in-out transform hover:-translate-z-1 hover:scale-110 hover:bg-red-700">Se connecter</button>        
+                    <a href="interface_patient.html" class="text-red-500 text-center transition duration-500 ease-in-out transform hover:-translate-z-1 hover:scale-110 hover:text-red-700 hover:underline">Retour à la connexion</a>
                 </div>
             </div>
-
-        </div>
-
-
-    </div>
-    
 </html>
