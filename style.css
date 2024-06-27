@@ -1,0 +1,9 @@
+@keyframes flash {
+    0% { box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000; }
+    50% { box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; }
+    100% { box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000; }
+}
+  
+.flash-animation {
+    animation: flash 1s linear infinite;
+}

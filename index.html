@@ -8,7 +8,7 @@
 </head>
 <body style="background-color: #f3f4f6;">
     <div style="position: absolute; top: -70%; left: -30%; width: 100%; height: 100%; z-index: -1;">
-        <svg class="outline-black" id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">                    
+        <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">                    
             <defs>                         
                 <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">                            
                     <stop id="stop1" stop-color="rgba(238, 55, 55, 1)" offset="0%"></stop>                            
@@ -17,19 +17,34 @@
             </defs>                
             <path fill="url(#sw-gradient)" d="M31.5,-23C36.9,-18.2,34.9,-5.4,28.9,0.8C22.9,7,12.9,6.6,3.8,12.8C-5.2,19.1,-13.4,32,-19.1,32.2C-24.9,32.3,-28.1,19.7,-28.7,8.9C-29.4,-2,-27.4,-11.2,-22.2,-15.9C-17,-20.7,-8.5,-21,2.2,-22.8C13,-24.5,26,-27.8,31.5,-23Z" width="200%" height="200%" transform="translate(50 50)" stroke-width="0"; style="transition: all 0.3s ease 0s;" ; stroke="rgba(253.933, 157.05, 111.196, 1)"></path>              
         </svg>
-    </div>    
-  <div class="flex flex-col h-screen outline-black">
-    <div class="flex outline-black">
-        <h1 class=" flex text-3xl outline-black mb-8">Bienvenue sur l'interface accompagnant de HPT</h1>
     </div>
-  </div>
-  <div class="flex flex-col items-center justify-center flex-1 outline-black">
-    <p class="text-center mb-4">Entrez le code identifiant du patient à suivre:</p>
-    <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" placeholder="Code identifiant">
-    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg mb-4">Continuer</button>
-    <a href="patient.html" class="text-blue-500 hover:text-blue-700">Passer à l'interface patient</a>
-  </div>
+    <div class="flex" style="height: 50vh;">
+    
+        <div class="flex flex-col">
+            <div class="flex text-5xl pl-20 pt-20">
+                <div class="flex flex-col">
+                    <p>Bienvenue sur l'interface</p>
+                    <p class="underline">accompagnant</p>
+                    <p>de HPT!</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="pl-96 pt-20 ">
+          <a href="https://imgbb.com/">
+            <div class="flash-animation">
+              <img src="https://i.ibb.co/0VGYqVp/Group-555logo.png" alt="Group-555logo" />
+            </div>
+          </a>
+        </div>
+    
+    </div>
 
+      <div class="flex flex-col items-center justify-center flex-1">
+        <p class="text-center mb-4">Entrez le code identifiant du patient à suivre:</p>
+        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" placeholder="Code identifiant">
+        <button class="bg-red-500 text-white font-bold py-2 px-4 rounded-lg mb-4 transition duration-500 ease-in-out transform hover:-translate-z-1 hover:scale-110 hover:bg-red-700">Continuer</button>        
+        <a href="patient.html" class="text-red-500 transition duration-500 ease-in-out transform hover:-translate-z-1 hover:scale-110 hover:text-red-700 hover:underline">Passer à l'interface patient</a>      </div>
   </div>
 </body>
 </html>
