@@ -40,107 +40,15 @@
     </div>
 
     <div class="flex flex-col justify-center items-center mb-6">
-        <p class="text-lg">Prise en charge depuis le: <span class="font-bold">{date}</span></p>
-        <p class="text-lg mt-2">Temps d'attente estimé: <span class="font-bold">{waiting_time} minutes</span></p>
+        <p class="text-lg">Nombre de prises en charge: <span class="total_PeC font-bold">{total_PeC}</span> <span> prises en charge</span></p>
+        <p class="text-lg mt-2"> Dernière prise en charge: <span class="last_PeC font-bold">{last_PeC}</span></p>
     </div>
 
-    <div class="mb-4 pl-10">
-        <p class="text-xl font-bold">Étapes avant la sortie:</p>
-    </div>
-
-    <div class="steps w-3/4 mx-auto flex">
-        <!-- Progress bar -->
-        <div class="flex flex-col items-center mr-8">
-            <div class="h-4 w-1 bg-red-500"></div>
-            <!--checkpoint ball-->
-            <div class="h-8 w-8 bg-red-500 rounded-full"></div>
-            <div class="h-12 w-1 bg-red-500"></div>
-            <div class="h-8 w-8 bg-red-500 rounded-full"></div>
-            <div class="h-12 w-1 bg-red-500"></div>
-            <div class="h-8 w-8 bg-red-500 rounded-full"></div>
-            <div class="h-2 w-1 bg-red-500"></div>
-
-            <!-- Dotted line for upcoming steps -->
-            <div class="h-2 w-1 bg-gray-300"></div>
-            <div class="h-2 w-1 bg-red-500"></div>
-            <div class="h-2 w-1 bg-gray-300"></div>
-            <div class="h-2 w-1 bg-red-500"></div>
-            <div class="h-2 w-1 bg-gray-300"></div>
-            <div class="h-2 w-1 bg-red-500"></div>
-            <div class="h-2 w-1 bg-gray-300"></div>
-            <div class="h-2 w-1 bg-red-500"></div>
-            <div class="h-2 w-1 bg-gray-300"></div>
-            <div class="h-2 w-1 bg-red-500"></div>
-            <div class="h-2 w-1 bg-gray-300"></div>
-
-            <!-- Final step -->
-            <div class="h-2 w-1 bg-red-500"></div>
-            <div class="h-8 w-8 bg-red-500 rounded-full"></div>
-
-        </div>
-
-        <!-- Steps -->
-        <div class="flex-grow">
-            <div class="step grid grid-cols-3 items-center mb-4 bg-white shadow-lg rounded-lg overflow-hidden">
-                <div class="flex justify-center items-center w-16 bg-red-500 text-white text-lg">
-                    <span>1</span>
-                </div>
-                <div class="px-4 py-2 flex-grow flex items-center">
-                    <img src="https://i.ibb.co/XLJsHHh/Group-522ticket.png" alt="ticket" class="w-12 h-12 mr-4">
-                    <p class="text-lg font-semibold">Patient enregistré</p>
-                </div>
-                <div class="pr-10 pl-4 pr-32 py-2">
-                    <p class="text-lg font-semibold">Statut: <span class="text-green-500">Terminé !</span></p>
-                </div>
-            </div>
-            <!-- Add more steps here -->
-            <div class="step grid grid-cols-3 items-center mb-4 bg-white shadow-lg rounded-lg overflow-hidden">
-                <div class="flex justify-center items-center w-16 bg-red-500 text-white text-lg">
-                    <span>2</span>
-                </div>
-                <div class="px-4 py-2 flex-grow flex items-center">
-                    <img src="https://i.ibb.co/HBrq0Xq/Group-523prdiag.png" alt="doctor" class="w-12 h-12 mr-4">
-                    <p class="text-lg font-semibold">Premier Diagnostic</p>
-                </div>
-                <div class="pr-10 pl-4 py-2">
-                    <p class="text-lg font-semibold">Statut: <span class="text-green-500">Terminé !</span></p>
-                    <p class="text-lg font-semibold">Résultat: <span class="text-red-500">⚠️ Non Concluant</span></p>
-                </div>
-            </div>
-            <div class="step grid grid-cols-3 items-center mb-4 bg-white shadow-lg rounded-lg overflow-hidden">
-                <div class="flex justify-center items-center w-16 bg-red-500 text-white text-lg">
-                    <span>3</span>
-                </div>
-                <div class="px-4 py-2 flex-grow flex items-center">
-                    <img src="https://i.ibb.co/1T8G1ft/Group-524exacomp.png" alt="doctor" class="w-12 h-12 mr-4">
-                    <p class="text-lg font-semibold">Examens Complémentaires</p>
-                </div>
-                <div class="pr-10 pl-4 pr-32 py-2 ">
-                    <p class="text-lg font-semibold">Statut: <span class="text-green-500">Terminé !</span></p>
-                </div>
-            </div>
-
-            <!-- Space for more steps -->
-            <div class="mb-16"></div>
-
-            <!-- Final step -->
-            <div class="step grid grid-cols-3 items-center mb-4 bg-white shadow-lg rounded-lg overflow-hidden">
-                <div class="flex justify-center items-center w-16 bg-red-500 text-white text-lg">
-                    <span>4</span>
-                </div>
-                <div class="px-4 py-2 flex-grow flex items-center">
-                    <img src="https://i.ibb.co/M7tMVkV/Group-525doorout.png" alt="doctor" class="w-12 h-12 mr-4">
-                    <p class="text-lg font-semibold">Prêt à sortir</p>
-                </div>
-                <div class="pr-10 pl-4 pr-24 mr-3 py-2">
-                    <p class="text-lg font-semibold">Statut: <span class="text-yellow-500">En attente...</span></p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="flex flex-col items-center justify-center pt-10 flex-1">
+        <a href="menu_PeC.html" class="bg-red-500 text-white font-bold py-2 px-4 rounded-lg mb-4 transition duration-500 ease-in-out transform hover:-translate-z-1 hover:scale-110 hover:bg-red-700">Ajouter une nouvelle prise en charge</a>
 
     <div class="flex flex-col items-center justify-center pt-10">
-        <a href="interface_accompagnant.html" class="text-red-500 transition duration-500 ease-in-out transform hover:-translate-z-1 hover:scale-110 hover:text-red-700 hover:underline">Retour à la page d'accueil</a>
+        <a href="interface_patient.html" class="text-red-500 transition duration-500 ease-in-out transform hover:-translate-z-1 hover:scale-110 hover:text-red-700 hover:underline">Retour à la page d'accueil</a>
 </body>
 </html>
 
