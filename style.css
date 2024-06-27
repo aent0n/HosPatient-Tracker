@@ -3,7 +3,21 @@
     50% { box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; }
     100% { box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000; }
 }
-  
+
 .flash-animation {
-    animation: flash 1s linear infinite;
+    animation: flash 2s linear infinite;
+    padding: 10px;
+    border-radius: 5%;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    height: 250px;
+    width: 250px;
+}
+
+.flash-animation img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
