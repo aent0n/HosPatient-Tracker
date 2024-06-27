@@ -6,6 +6,7 @@
   <title>HPT - Interface Accompagnant</title>
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer="true"></script>
 </head>
 <body style="background-color: #f3f4f6;">
     <div style="position: absolute; top: -70%; left: -30%; width: 100%; height: 100%; z-index: -1;">
@@ -99,32 +100,31 @@
             </div>
         </div>
     
-        <div class="pl-96 ml-96 pt-8">
+        <div class="pl-96 ml-80 pt-8">
             <div class="flash-animation-small">
                 <img src="https://i.ibb.co/dbMS5N2/Group-555logo.png" alt="Group-555logo" />
             </div>
         </div>
     </div>
-                <!-- aline stating "ajouter ka première étape de la prise en charge:" and a fancy and modern way to display some pre-made steps or a custom step-->
-                <div class="flex flex-col pl-20">
-                    <p class="text-center">Ajouter la première étape de la prise en charge:</p>
-                    <div class="flex flex-col items-center justify-center pt-5">
-                        <p class="text-center mb-8">Veuillez choisir une étape:</p>
-                        <div class="flex flex-row">
-                            <div class="flex flex-col items-center justify-center">
-                                <div class="h-8 w-8 bg-red-500 rounded-full"></div>
-                                <p class="text-lg">Consultation</p>
-                            </div>
-                            <div class="flex flex-col items-center justify-center ml-10">
-                                <div class="h-8 w-8 bg-red-500 rounded-full"></div>
-                                <p class="text-lg">Examen</p>
-                            </div>
-                            <div class="flex flex-col items-center justify-center ml-10">
-                                <div class="h-8 w-8 bg-red-500 rounded-full"></div>
-                                <p class="text-lg">Traitement</p>
-                            </div>
-                        </div>
-                        <button class="bg-red-500 text-white text-lg font-bold py-2 px-2 mr-60 rounded-lg mb-4 transition duration-500 ease-in-out transform hover:-translate-z-1 hover:scale-110 hover:bg-red-700 ">Confirmer</button>
-                    </div>
+    <div class="flex text-2xl flex-col ml-80">
+        <p class="text-center">Ajouter la première étape de la prise en charge:</p>
+        <div class="flex flex-col items-center" justify-center pt-5">
+            <p class="text-center mb-8">Veuillez choisir une étape:</p>
+            <div class="flex flex-row">
+                <div class="step flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-4 mx-4 mb-4 w-50 h-50 transform transition duration-500 ease-in-out hover:scale-110 border-2 border-transparent" onclick="changeBorderColor(this)">
+                    <img src="https://i.ibb.co/qsP78f7/Group-556-RED-TICKET.png" alt="registered">
+                    <p class="text-lg">Enregistrement à l'hôpital</p>
                 </div>
+                <div class="step flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-4 mx-4 mb-4 w-50 h-50 transform transition duration-500 ease-in-out hover:scale-110 border-2 border-transparent" onclick="changeBorderColor(this)">
+                    <img src="https://i.ibb.co/y42pPfV/Group-557red-check.png" alt="red_tick_test">
+                    <p class="text-lg">Premier diagnostic réalisé</p>
+                </div>
+                <div class="step flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-4 mx-4 mb-4 w-50 h-50 transform transition duration-500 ease-in-out hover:scale-110 border-2 border-transparent" onclick="changeBorderColor(this)">
+                    <img src="https://i.ibb.co/MnV04gL/Group-558plus.png" alt="custom_action">
+                    <p class="text-lg">Étape personnalisée</p>
+                </div>
+            </div>
+            <button class=" ml-60 bg-red-500 text-white text-lg font-bold py-2 px-2 mr-60 rounded-lg mb-4 transition duration-500 ease-in-out transform hover:-translate-z-1 hover:scale-110 hover:bg-red-700 ">Confirmer</button>
+        </div>
+    </div>
 </body>
