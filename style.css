@@ -16,6 +16,18 @@
     width: 250px;
 }
 
+.flash-animation-small {
+    animation: flash 2s linear infinite;
+    padding: 10px;
+    border-radius: 5%;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    height: 180px;
+    width: 180px;
+}
+
 .flash-animation img {
     height: 100%;
     width: 100%;

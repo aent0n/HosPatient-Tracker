@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HPT - Interface Accompagnant</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: #f3f4f6;">
+    <div style="position: absolute; top: -120%; left: 10%; width: 130%; height: 130%; z-index: -1; transform: rotate(70deg);">
+        <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">                    
+            <defs>                         
+                <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">                            
+                    <stop id="stop1" stop-color="rgba(238, 55, 55, 1)" offset="0%"></stop>                            
+                    <stop id="stop2" stop-color="rgba(255, 193.353, 124.621, 0.38)" offset="100%"></stop>                        
+                </linearGradient>                    
+            </defs>                
+            <path fill="url(#sw-gradient)" d="M25.3,-18.1C28.4,-9.2,23.6,0.8,18,10.7C12.5,20.6,6.2,30.5,2.1,29.3C-2,28,-4,15.7,-5.6,8.1C-7.2,0.4,-8.4,-2.6,-7.4,-10.2C-6.4,-17.8,-3.2,-30.1,3.9,-32.4C11.1,-34.7,22.2,-26.9,25.3,-18.1Z" width="100%" height="100%" transform="translate(50 50)" stroke-width="0" style="transition: all 0.3s ease 0s;" stroke="url(#sw-gradient)"></path>              
+        </svg>
+    </div>
+    <div class="flex justify-center ml-96 pl-20"  style="height: 35vh; ">
+    
+        <div class="flex flex-col items-center  justify-top">
+            <div class="flex text-4xl pl-20 pt-5 ">
+                <div class="flex flex-col pt-7 ">
+                    <p>Patient n° {patient_id}:</p>
+                    <p class="name">{name}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class=" mt-10 ml-80">
+          <div class="flash-animation-small">
+            <img src="https://i.ibb.co/dbMS5N2/Group-555logo.png" alt="Group-555logo" />
+          </div>
+        </div>
+
+    </div>
+
+    <div class="flex flex-col justify-center items-center mb-6">
+        <p class="text-lg">Prise en charge depuis le: <span class="font-bold">{date}</span></p>
+        <p class="text-lg mt-2">Temps d'attente estimé: <span class="font-bold">{waiting_time} minutes</span></p>
+    </div>
+
+    <div class="mb-4 pl-10">
+        <p class="text-xl font-bold">Étapes avant la sortie:</p>
+    </div>
+
+    <div class="steps w-3/4 mx-auto flex">
+        <!-- Progress bar -->
+        <div class="flex flex-col items-center mr-8">
+            <div class="h-4 w-1 bg-red-500"></div>
+            <!--checkpoint ball-->
+            <div class="h-8 w-8 bg-red-500 rounded-full"></div>
+            <div class="h-12 w-1 bg-red-500"></div>
+            <div class="h-8 w-8 bg-red-500 rounded-full"></div>
+            <div class="h-12 w-1 bg-red-500"></div>
+            <div class="h-8 w-8 bg-red-500 rounded-full"></div>
+            <div class="h-2 w-1 bg-red-500"></div>
+
+            <!-- Dotted line for upcoming steps -->
+            <div class="h-2 w-1 bg-gray-300"></div>
+            <div class="h-2 w-1 bg-red-500"></div>
+            <div class="h-2 w-1 bg-gray-300"></div>
+            <div class="h-2 w-1 bg-red-500"></div>
+            <div class="h-2 w-1 bg-gray-300"></div>
+            <div class="h-2 w-1 bg-red-500"></div>
+            <div class="h-2 w-1 bg-gray-300"></div>
+            <div class="h-2 w-1 bg-red-500"></div>
+            <div class="h-2 w-1 bg-gray-300"></div>
+            <div class="h-2 w-1 bg-red-500"></div>
+            <div class="h-2 w-1 bg-gray-300"></div>
+
+            <!-- Final step -->
+            <div class="h-2 w-1 bg-red-500"></div>
+            <div class="h-8 w-8 bg-red-500 rounded-full"></div>
+
+        </div>
+
+        <!-- Steps -->
+        <div class="flex-grow">
+            <div class="step grid grid-cols-3 items-center mb-4 bg-white shadow-lg rounded-lg overflow-hidden">
+                <div class="flex justify-center items-center w-16 bg-red-500 text-white text-lg">
+                    <span>1</span>
+                </div>
+                <div class="px-4 py-2 flex-grow flex items-center">
+                    <img src="https://i.ibb.co/XLJsHHh/Group-522ticket.png" alt="ticket" class="w-12 h-12 mr-4">
+                    <p class="text-lg font-semibold">Patient enregistré</p>
+                </div>
+                <div class="pr-10 pl-4 pr-32 py-2">
+                    <p class="text-lg font-semibold">Statut: <span class="text-green-500">Terminé !</span></p>
+                </div>
+            </div>
+            <!-- Add more steps here -->
+            <div class="step grid grid-cols-3 items-center mb-4 bg-white shadow-lg rounded-lg overflow-hidden">
+                <div class="flex justify-center items-center w-16 bg-red-500 text-white text-lg">
+                    <span>2</span>
+                </div>
+                <div class="px-4 py-2 flex-grow flex items-center">
+                    <img src="https://i.ibb.co/HBrq0Xq/Group-523prdiag.png" alt="doctor" class="w-12 h-12 mr-4">
+                    <p class="text-lg font-semibold">Premier Diagnostic</p>
+                </div>
+                <div class="pr-10 pl-4 py-2">
+                    <p class="text-lg font-semibold">Statut: <span class="text-green-500">Terminé !</span></p>
+                    <p class="text-lg font-semibold">Résultat: <span class="text-red-500">⚠️ Non Concluant</span></p>
+                </div>
+            </div>
+            <div class="step grid grid-cols-3 items-center mb-4 bg-white shadow-lg rounded-lg overflow-hidden">
+                <div class="flex justify-center items-center w-16 bg-red-500 text-white text-lg">
+                    <span>3</span>
+                </div>
+                <div class="px-4 py-2 flex-grow flex items-center">
+                    <img src="https://i.ibb.co/1T8G1ft/Group-524exacomp.png" alt="doctor" class="w-12 h-12 mr-4">
+                    <p class="text-lg font-semibold">Examens Complémentaires</p>
+                </div>
+                <div class="pr-10 pl-4 pr-32 py-2 ">
+                    <p class="text-lg font-semibold">Statut: <span class="text-green-500">Terminé !</span></p>
+                </div>
+            </div>
+
+            <!-- Space for more steps -->
+            <div class="mb-16"></div>
+
+            <!-- Final step -->
+            <div class="step grid grid-cols-3 items-center mb-4 bg-white shadow-lg rounded-lg overflow-hidden">
+                <div class="flex justify-center items-center w-16 bg-red-500 text-white text-lg">
+                    <span>4</span>
+                </div>
+                <div class="px-4 py-2 flex-grow flex items-center">
+                    <img src="https://i.ibb.co/M7tMVkV/Group-525doorout.png" alt="doctor" class="w-12 h-12 mr-4">
+                    <p class="text-lg font-semibold">Prêt à sortir</p>
+                </div>
+                <div class="pr-10 pl-4 pr-24 mr-3 py-2">
+                    <p class="text-lg font-semibold">Statut: <span class="text-yellow-500">En attente...</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col items-center justify-center pt-10">
+        <a href="interface_accompagnant.html" class="text-red-500 transition duration-500 ease-in-out transform hover:-translate-z-1 hover:scale-110 hover:text-red-700 hover:underline">Retour à la page d'accueil</a>
+</body>
+</html>
+
+
+</html>
