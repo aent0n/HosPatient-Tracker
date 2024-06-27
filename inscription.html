@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HPT - Inscriptions</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #f3f4f6;">
+    <div style="position: absolute; top: -85%; left: -50%; width: 130%; height: 130%; z-index: -1; transform: rotate(5deg);">        
+        <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">                    
+            <defs>                         
+                <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">                            
+                    <stop id="stop1" stop-color="rgba(238, 55, 55, 1)" offset="0%"></stop>                            
+                    <stop id="stop2" stop-color="rgba(255, 193.353, 124.621, 0.38)" offset="100%"></stop>                        
+                </linearGradient>                    
+            </defs>                
+            <path fill="url(#sw-gradient)" d="M23.7,-18.6C23.7,-13.6,11.8,-6.8,5.9,-1.6C0,3.6,0,7.2,-2,8.3C-4,9.5,-8,8.2,-11.6,4.3C-15.2,0.4,-18.5,-6.1,-16.5,-12.1C-14.5,-18.2,-7.2,-23.8,2.3,-25.1C11.8,-26.4,23.6,-23.5,23.7,-18.6Z" width="100%" height="100%" transform="translate(50 50)" stroke-width="0" style="transition: all 0.3s ease 0s;" stroke="url(#sw-gradient)"></path>              
+        </svg>
+    </div>
+    <div class="flex" style="height: 50vh;">
+    
+        <div class="flex flex-col">
+            <div class="flex text-5xl pl-20 pt-20">
+                <div class="flex flex-col">
+                    <p>S'inscrire</p>
+                    <div class="flex mt-1">
+                        <p> en tant que patient <br> sur HPT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flex flex-col items-center justify-center flex-1 pt-96 mt-10">
+            <div class="flex">
+                <div class="flex flex-col">
+                    <div class="flex text-3xl">
+                        <p>Formulaire d'inscription:</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center pt-10">
+                        <p class="text-center mb-4">Veuillez entrer les informations suivantes:</p>
+                        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" placeholder="Nom">
+                        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" placeholder="Prénom">
+                        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" placeholder="Numéro de téléphone">
+                        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" placeholder="Adresse mail">
+                        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" placeholder="Mot de passe">
+                        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" placeholder="Confirmer le mot de passe">
+                    </div>
+                </div>
+
+                <div class="flex flex-col pl-60 pt-60">
+                    <button class="bg-red-500 text-white font-bold py-2 px-4 rounded-lg mb-4 transition duration-500 ease-in-out transform hover:-translate-z-1 hover:scale-110 hover:bg-red-700">S'inscrire</button>        
+                    <a href="interface_patient.html" class="text-red-500 transition duration-500 ease-in-out transform hover:-translate-z-1 hover:scale-110 hover:text-red-700 hover:underline">Passer à l'interface patient</a>
+    
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    
+</html>
