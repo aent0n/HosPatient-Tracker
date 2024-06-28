@@ -26,7 +26,7 @@ HosPatient-Tracker is a web application designed to streamline patient tracking 
 - **Database**: SQLlite will be used for storing patient data and room information
 - **Encryption**: No big security process, each patient have a unique code
 - **Front-End Technologies**: HTML5, CSS3 (Tailwind Framework), JavaScript
-- **Back-End Technologies**: [List the technologies used for server-side logic (Python)]
+- **Back-End Technologies**: Python, Flask & SQLAlchemy
 
 ## Installation and Usage
 [Provide instructions on how to set up and run the application]
