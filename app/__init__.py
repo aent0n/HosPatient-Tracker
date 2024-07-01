@@ -1,5 +1,5 @@
 from flask import Flask
-from .fonctionsDB import db
+from app.fonctionsDB import db
 import os
 
 def create_app():
