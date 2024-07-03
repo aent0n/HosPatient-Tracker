@@ -1,25 +1,45 @@
 from flask_sqlalchemy import SQLAlchemy
 import random
 import string
+
 db = SQLAlchemy()
 
 # Modèles de données
 class Patients(db.Model):
-    IdPatient = db.Column(db.Integer, primary_key=True,nullable=False,)
+    IdPatient = db.Column(db.Integer, primary_key=True, nullable=False)
     email = db.Column(db.String(50), nullable=False)
-    code = db.Column(db.Integer, nullable=False)
-    mdp = db.Column(db.String, nullable=False, unique=True)
+    code = db.Column(db.String(6), nullable=False)
+    mdp = db.Column(db.String(50), nullable=False, unique=True)
 
 class Accompagnants(db.Model):
     IdAccompagnant = db.Column(db.Integer, primary_key=True)
     nom = db.Column(db.String(50), nullable=False)
     prenom = db.Column(db.String(50), nullable=False)
     relation = db.Column(db.String(50), nullable=False)
-    IdPatient = db.Column(db.Integer, db.ForeignKey('Patients.IdPatient'), nullable=False)
-    patient = db.relationship('Patient', backref=db.backref('accompagnants', lazy='dynamic'))
+    IdPatient = db.Column(db.Integer, db.ForeignKey('patients.IdPatient'), nullable=False)
+    patient = db.relationship('Patients', backref=db.backref('accompagnants', lazy='dynamic'))
 
+class Etapes(db.Model):
+    IdEtape = db.Column(db.Integer, primary_key=True)
+    nom = db.Column(db.String(50), nullable=False)
+    dateDebut = db.Column(db.DateTime)
+    dateFin = db.Column(db.DateTime)
+    duree = db.Column(db.Integer)
 
+class Admissions(db.Model):
+    IdAdmission = db.Column(db.Integer, primary_key=True)
+    IdPatient = db.Column(db.Integer, db.ForeignKey('patients.IdPatient'), nullable=False)
+    patient = db.relationship('Patients', backref=db.backref('admissions', lazy='dynamic'))
 
+class Processus(db.Model):
+    IdProcessus = db.Column(db.Integer, primary_key=True)
+    dateDebut = db.Column(db.DateTime)
+    dateFin = db.Column(db.DateTime)
+    duree = db.Column(db.Integer)
+    IdPatient = db.Column(db.Integer, db.ForeignKey('patients.IdPatient'), nullable=False)
+    patient = db.relationship('Patients', backref=db.backref('processus', lazy='dynamic'))
+    IdEtape = db.Column(db.Integer, db.ForeignKey('etapes.IdEtape'), nullable=False)
+    etape = db.relationship('Etapes', backref=db.backref('processus', lazy='dynamic'))
 
 def generer_code_unique(patient_id):
     """
@@ -32,13 +52,18 @@ def generer_code_unique(patient_id):
     code = ''.join(random.choices(string.ascii_uppercase + string.digits, k=6))
     
     return code
-# Fonctions# Fonctions pour les patients
-def creer_patient(email,  mdp):
-    code = generer_code_unique(IdPatient)
 
-    patient = Patients(email=email, code=code, mdp=mdp)
+# Fonctions pour les patients
+def creer_patient(email, mdp):
+    # Create a patient instance to get the ID
+    patient = Patients(email=email, mdp=mdp)
     db.session.add(patient)
     db.session.commit()
+    
+    # Generate code using the patient ID
+    patient.code = generer_code_unique(patient.IdPatient)
+    db.session.commit()
+    
     return patient
 
 def get_patient_by_email(email):
@@ -82,3 +107,8 @@ def delete_accompagnant(accompagnant_id):
     accompagnant = Accompagnants.query.get(accompagnant_id)
     db.session.delete(accompagnant)
     db.session.commit()
+
+def get_patient_steps(patient_id):
+    patient = Patients.query.get(patient_id)
+    # Assuming you want to return steps related to the patient, but this function is not fully implemented.
+    return [processus.etape for processus in patient.processus]
