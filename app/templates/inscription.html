@@ -6,6 +6,7 @@
   <title>HPT - Inscriptions</title>
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='inscription.js') }}" defer="true"></script>
 </head>
 <body style="background-color: #f3f4f6;">
     <div style="position: absolute; top: -85%; left: -50%; width: 130%; height: 130%; z-index: -1; transform: rotate(5deg);">        
@@ -33,28 +34,29 @@
         </div>
         
         <div class="flex flex-col items-center justify-center flex-1 pt-96 mt-10">
-            <div class="flex">
+            <form id="inscription" class="flex">
                 <div class="flex flex-col">
                     <div class="flex text-3xl">
                         <p>Formulaire d'inscription:</p>
                     </div>
                     <div class="flex flex-col items-center justify-center pt-10">
                         <p class="text-center mb-4">Veuillez entrer les informations suivantes:</p>
-                        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" placeholder="Nom">
-                        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" placeholder="Prénom">
-                        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" placeholder="Numéro de téléphone">
-                        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" placeholder="Adresse mail">
-                        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" placeholder="Mot de passe">
-                        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" placeholder="Confirmer le mot de passe">
+                        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" id="nom" placeholder="Nom">
+                        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" id="prenom" placeholder="Prénom">
+                        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" id="numeroTel" placeholder="Numéro de téléphone">
+                        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" id="mail" placeholder="Adresse mail">
+                        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" id="password" placeholder="Mot de passe">
+                        <input type="text" class="border border-gray-300 rounded-lg p-2 mb-4 w-full max-w-md" id="passwordConf" placeholder="Confirmer le mot de passe">
+                        <p id="errortext" class="text-center text-red-500 mb-4"></p>
                     </div>
                 </div>
 
                 <div class="flex flex-col pl-60 pt-60">
-                    <a href="app/static/templates/confirmation_inscription.html" class="bg-red-500 text-white font-bold py-2 px-4 rounded-lg mb-4 transition duration-500 ease-in-out transform hover:-translate-z-1 hover:scale-110 hover:bg-red-700">S'inscrire</a>        
+                    <button type="submit" class="bg-red-500 text-white font-bold py-2 px-4 rounded-lg mb-4 transition duration-500 ease-in-out transform hover:-translate-z-1 hover:scale-110 hover:bg-red-700">S'inscrire</button>        
                     <a href="app/static/templates/interface_patient.html" class="text-red-500 transition duration-500 ease-in-out transform hover:-translate-z-1 hover:scale-110 hover:text-red-700 hover:underline">Passer à l'interface patient</a>
     
                 </div>
-            </div>
+            </form>
 
         </div>
 
