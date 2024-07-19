@@ -1,8 +1,7 @@
 from flask_sqlalchemy import SQLAlchemy
 import random
 import string
-
-db = SQLAlchemy()
+from . import db
 
 # Modèles de données
 class Patients(db.Model):
